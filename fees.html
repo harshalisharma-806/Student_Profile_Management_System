@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fee Management | CampusOne AI</title>
+
+<link rel="stylesheet" href="css/fees.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ===========================
+SIDEBAR
+=========================== -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h2>CampusOne <span>AI</span></h2>
+
+</div>
+
+<ul>
+
+<li onclick="location.href='dashboard.html'">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</li>
+
+<li onclick="location.href='profile.html'">
+
+<i class="fa-solid fa-user"></i>
+
+Student Profile
+
+</li>
+
+<li onclick="location.href='attendance.html'">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Attendance
+
+</li>
+
+<li class="active">
+
+<i class="fa-solid fa-wallet"></i>
+
+Fee Management
+
+</li>
+
+<li onclick="location.href='performance.html'">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Performance
+
+</li>
+
+<li onclick="location.href='certificates.html'">
+
+<i class="fa-solid fa-award"></i>
+
+Certificates
+
+</li>
+
+<li onclick="location.href='documents.html'">
+
+<i class="fa-solid fa-folder"></i>
+
+Documents
+
+</li>
+
+<li onclick="location.href='ai.html'">
+
+<i class="fa-solid fa-robot"></i>
+
+Campus AI
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ===========================
+MAIN
+=========================== -->
+
+<main>
+
+<header class="topbar">
+
+<h1>Fee Management</h1>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/150?img=12">
+
+<div>
+
+<h3>Tanav</h3>
+
+<p>CSE AI & ML</p>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ===========================
+SUMMARY CARDS
+=========================== -->
+
+<section class="summary">
+
+<div class="card total">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+<h2>₹1,20,000</h2>
+
+<p>Total Semester Fee</p>
+
+</div>
+
+<div class="card paid">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h2>₹1,07,500</h2>
+
+<p>Paid</p>
+
+</div>
+
+<div class="card pending">
+
+<i class="fa-solid fa-clock"></i>
+
+<h2>₹12,500</h2>
+
+<p>Pending</p>
+
+</div>
+
+<div class="card due">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<h2>10 Days</h2>
+
+<p>Due Date Left</p>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PAYMENT CHART
+=========================== -->
+
+<section class="chart-section">
+
+<div class="chart-card">
+
+<h2>Semester Fee Analysis</h2>
+
+<canvas id="feeChart"></canvas>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PAYMENT HISTORY
+=========================== -->
+
+<section class="payment-history">
+
+<h2>Payment History</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+
+<th>Receipt</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+<th>Mode</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>05 Jul 2026</td>
+
+<td>#CP10021</td>
+
+<td>₹50,000</td>
+
+<td class="paid-status">Paid</td>
+
+<td>UPI</td>
+
+</tr>
+
+<tr>
+
+<td>12 Jan 2026</td>
+
+<td>#CP09784</td>
+
+<td>₹57,500</td>
+
+<td class="paid-status">Paid</td>
+
+<td>Net Banking</td>
+
+</tr>
+
+<tr>
+
+<td>Pending</td>
+
+<td>#CP10450</td>
+
+<td>₹12,500</td>
+
+<td class="pending-status">Pending</td>
+
+<td>---</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- Part 2 Starts Here -->
+ <!-- ===========================
+PAYMENT METHODS
+=========================== -->
+
+<section class="payment-methods">
+
+<h2>Payment Methods</h2>
+
+<div class="method-grid">
+
+<div class="method-card">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h3>Net Banking</h3>
+
+<p>Secure bank transfer</p>
+
+<button>Pay Now</button>
+
+</div>
+
+<div class="method-card">
+
+<i class="fa-brands fa-google-pay"></i>
+
+<h3>UPI Payment</h3>
+
+<p>Google Pay / PhonePe / Paytm</p>
+
+<button>Pay Now</button>
+
+</div>
+
+<div class="method-card">
+
+<i class="fa-solid fa-credit-card"></i>
+
+<h3>Debit / Credit Card</h3>
+
+<p>Visa • MasterCard • RuPay</p>
+
+<button>Pay Now</button>
+
+</div>
+
+<div class="method-card">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h3>Wallet</h3>
+
+<p>Fast online payment</p>
+
+<button>Pay Now</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+QR PAYMENT
+=========================== -->
+
+<section class="qr-payment">
+
+<div class="qr-card">
+
+<h2>Pay Using QR Code</h2>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=CampusOneAI-FeePayment"
+alt="QR Code">
+
+<p>
+
+Scan using any UPI application to pay your pending fee.
+
+</p>
+
+<button>
+
+Download QR
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FEE BREAKDOWN
+=========================== -->
+
+<section class="fee-breakdown">
+
+<h2>Semester Fee Breakdown</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Category</th>
+
+<th>Amount</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Tuition Fee</td>
+
+<td>₹80,000</td>
+
+</tr>
+
+<tr>
+
+<td>Library Fee</td>
+
+<td>₹5,000</td>
+
+</tr>
+
+<tr>
+
+<td>Laboratory Fee</td>
+
+<td>₹15,000</td>
+
+</tr>
+
+<tr>
+
+<td>Examination Fee</td>
+
+<td>₹10,000</td>
+
+</tr>
+
+<tr>
+
+<td>Development Fee</td>
+
+<td>₹10,000</td>
+
+</tr>
+
+<tr>
+
+<th>Total</th>
+
+<th>₹1,20,000</th>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ===========================
+REMINDER
+=========================== -->
+
+<section class="reminder">
+
+<div class="reminder-card">
+
+<i class="fa-solid fa-bell"></i>
+
+<div>
+
+<h2>Payment Reminder</h2>
+
+<p>
+
+Your remaining fee of <strong>₹12,500</strong>
+must be paid within
+<strong>10 days</strong> to avoid late charges.
+
+</p>
+
+</div>
+
+<button>
+
+Pay Now
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===========================
+RECEIPTS
+=========================== -->
+
+<section class="receipts">
+
+<h2>Download Receipts</h2>
+
+<div class="receipt-grid">
+
+<div class="receipt-card">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+<h3>Semester 1</h3>
+
+<button>
+
+Download
+
+</button>
+
+</div>
+
+<div class="receipt-card">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+<h3>Semester 2</h3>
+
+<button>
+
+Download
+
+</button>
+
+</div>
+
+<div class="receipt-card">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+<h3>Semester 3</h3>
+
+<button>
+
+Download
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+SCHOLARSHIP
+=========================== -->
+
+<section class="scholarship">
+
+<h2>Scholarship Details</h2>
+
+<div class="scholarship-card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<div>
+
+<h3>Merit Scholarship</h3>
+
+<p>
+
+No active scholarship available.
+
+Maintain a CGPA above <strong>9.0</strong>
+to become eligible next semester.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Part 3 Starts Here -->
+ <!-- ===========================
+FEE STATISTICS
+=========================== -->
+
+<section class="statistics">
+
+<h2>Fee Statistics</h2>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h3>Total Paid</h3>
+
+<h1>₹1,07,500</h1>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-hourglass-half"></i>
+
+<h3>Pending</h3>
+
+<h1>₹12,500</h1>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-receipt"></i>
+
+<h3>Receipts</h3>
+
+<h1>3</h1>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<h3>Due Date</h3>
+
+<h1>10 Days</h1>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PAYMENT TIMELINE
+=========================== -->
+
+<section class="timeline">
+
+<h2>Payment Timeline</h2>
+
+<div class="timeline-container">
+
+<div class="timeline-item">
+
+<h3>Semester 1</h3>
+
+<p>Paid Successfully</p>
+
+<span>August 2025</span>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Semester 2</h3>
+
+<p>Paid Successfully</p>
+
+<span>January 2026</span>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Semester 3</h3>
+
+<p>Partially Paid</p>
+
+<span>July 2026</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PAYMENT STATUS
+=========================== -->
+
+<section class="payment-status">
+
+<div class="status-card success">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<div>
+
+<h2>Payment Status</h2>
+
+<p>
+
+89.6% of your semester fee has already been paid.
+
+Only <strong>₹12,500</strong> is remaining.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FINANCIAL TIPS
+=========================== -->
+
+<section class="tips">
+
+<h2>Financial Tips</h2>
+
+<ul>
+
+<li>💡 Pay before the due date to avoid late fees.</li>
+
+<li>💳 Keep payment receipts safely for future reference.</li>
+
+<li>📄 Download the latest receipt after every payment.</li>
+
+<li>🎓 Check scholarship eligibility every semester.</li>
+
+<li>🏦 Use verified payment methods only.</li>
+
+</ul>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 CampusOne AI • Fee Management System
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/fees.js"></script>
+
+</body>
+
+</html>

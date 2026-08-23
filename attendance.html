@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Attendance | CampusOne AI</title>
+
+<link rel="stylesheet"
+href="css/attendance.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ===========================
+SIDEBAR
+=========================== -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h2>
+
+CampusOne <span>AI</span>
+
+</h2>
+
+</div>
+
+<ul>
+
+<li onclick="location.href='dashboard.html'">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</li>
+
+<li onclick="location.href='profile.html'">
+
+<i class="fa-solid fa-user"></i>
+
+Student Profile
+
+</li>
+
+<li class="active">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Attendance
+
+</li>
+
+<li onclick="location.href='fees.html'">
+
+<i class="fa-solid fa-wallet"></i>
+
+Fees
+
+</li>
+
+<li onclick="location.href='performance.html'">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Performance
+
+</li>
+
+<li onclick="location.href='certificates.html'">
+
+<i class="fa-solid fa-award"></i>
+
+Certificates
+
+</li>
+
+<li onclick="location.href='documents.html'">
+
+<i class="fa-solid fa-folder"></i>
+
+Documents
+
+</li>
+
+<li onclick="location.href='ai.html'">
+
+<i class="fa-solid fa-robot"></i>
+
+Campus AI
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ===========================
+MAIN
+=========================== -->
+
+<main>
+
+<header class="topbar">
+
+<h1>
+
+Attendance Management
+
+</h1>
+
+<div class="profile">
+
+<img
+src="https://i.pravatar.cc/150?img=12">
+
+<div>
+
+<h3>Tanav</h3>
+
+<p>CSE AI & ML</p>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ===========================
+SUMMARY
+=========================== -->
+
+<section class="summary">
+
+<div class="card">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<h2>92%</h2>
+
+<p>Overall Attendance</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-book"></i>
+
+<h2>28</h2>
+
+<p>Classes This Month</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h2>26</h2>
+
+<p>Classes Attended</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-circle-xmark"></i>
+
+<h2>2</h2>
+
+<p>Classes Missed</p>
+
+</div>
+
+</section>
+
+<!-- ===========================
+CHART
+=========================== -->
+
+<section class="chart-section">
+
+<div class="chart-card">
+
+<h2>
+
+Monthly Attendance
+
+</h2>
+
+<canvas id="attendanceChart">
+
+</canvas>
+
+</div>
+
+</section>
+
+<!-- ===========================
+SUBJECT TABLE
+=========================== -->
+
+<section class="attendance-table">
+
+<h2>
+
+Subject Wise Attendance
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Subject</th>
+
+<th>Present</th>
+
+<th>Total</th>
+
+<th>Attendance</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Java Programming</td>
+
+<td>25</td>
+
+<td>27</td>
+
+<td>93%</td>
+
+<td class="good">
+
+Excellent
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Database Management</td>
+
+<td>24</td>
+
+<td>27</td>
+
+<td>89%</td>
+
+<td class="good">
+
+Excellent
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Artificial Intelligence</td>
+
+<td>26</td>
+
+<td>27</td>
+
+<td>96%</td>
+
+<td class="good">
+
+Excellent
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Operating Systems</td>
+
+<td>22</td>
+
+<td>27</td>
+
+<td>81%</td>
+
+<td class="warning">
+
+Average
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Computer Networks</td>
+
+<td>21</td>
+
+<td>27</td>
+
+<td>78%</td>
+
+<td class="danger">
+
+Low
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- Part 2 Starts Here -->
+ <!-- ===========================
+ATTENDANCE CALENDAR
+=========================== -->
+
+<section class="calendar-section">
+
+<h2>Monthly Attendance Calendar</h2>
+
+<div class="calendar">
+
+<div class="day heading">Mon</div>
+<div class="day heading">Tue</div>
+<div class="day heading">Wed</div>
+<div class="day heading">Thu</div>
+<div class="day heading">Fri</div>
+<div class="day heading">Sat</div>
+<div class="day heading">Sun</div>
+
+<div class="day">1</div>
+<div class="day present">2</div>
+<div class="day present">3</div>
+<div class="day">4</div>
+<div class="day present">5</div>
+<div class="day present">6</div>
+<div class="day absent">7</div>
+
+<div class="day present">8</div>
+<div class="day present">9</div>
+<div class="day present">10</div>
+<div class="day">11</div>
+<div class="day present">12</div>
+<div class="day present">13</div>
+<div class="day absent">14</div>
+
+<div class="day present">15</div>
+<div class="day present">16</div>
+<div class="day present">17</div>
+<div class="day">18</div>
+<div class="day present">19</div>
+<div class="day present">20</div>
+<div class="day present">21</div>
+
+<div class="day present">22</div>
+<div class="day present">23</div>
+<div class="day present">24</div>
+<div class="day">25</div>
+<div class="day present">26</div>
+<div class="day present">27</div>
+<div class="day">28</div>
+
+<div class="day">29</div>
+<div class="day">30</div>
+
+</div>
+
+<div class="legend">
+
+<div>
+
+<span class="present-box"></span>
+
+Present
+
+</div>
+
+<div>
+
+<span class="absent-box"></span>
+
+Absent
+
+</div>
+
+<div>
+
+<span class="holiday-box"></span>
+
+Holiday
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+WEEKLY REPORT
+=========================== -->
+
+<section class="weekly-report">
+
+<h2>Weekly Attendance Report</h2>
+
+<div class="week-grid">
+
+<div class="week-card">
+
+<h3>Week 1</h3>
+
+<p>96%</p>
+
+</div>
+
+<div class="week-card">
+
+<h3>Week 2</h3>
+
+<p>91%</p>
+
+</div>
+
+<div class="week-card">
+
+<h3>Week 3</h3>
+
+<p>94%</p>
+
+</div>
+
+<div class="week-card">
+
+<h3>Week 4</h3>
+
+<p>89%</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+ATTENDANCE ALERTS
+=========================== -->
+
+<section class="alerts">
+
+<h2>Attendance Alerts</h2>
+
+<div class="alert warning">
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+<div>
+
+<h3>Computer Networks</h3>
+
+<p>
+
+Attendance is only 78%.
+Attend the next classes to stay above 75%.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="alert success">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<div>
+
+<h3>Artificial Intelligence</h3>
+
+<p>
+
+Excellent attendance (96%).
+Keep up the consistency!
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+GOALS
+=========================== -->
+
+<section class="goals">
+
+<h2>Attendance Goals</h2>
+
+<div class="goal">
+
+<p>Overall Attendance</p>
+
+<div class="progress">
+
+<div class="fill overall"></div>
+
+</div>
+
+<span>92%</span>
+
+</div>
+
+<div class="goal">
+
+<p>Target Attendance</p>
+
+<div class="progress">
+
+<div class="fill target"></div>
+
+</div>
+
+<span>95%</span>
+
+</div>
+
+<div class="goal">
+
+<p>Minimum Required</p>
+
+<div class="progress">
+
+<div class="fill minimum"></div>
+
+</div>
+
+<span>75%</span>
+
+</div>
+
+</section>
+
+<!-- Part 3 Starts Here -->
+ <!-- ===========================
+ATTENDANCE STATISTICS
+=========================== -->
+
+<section class="statistics">
+
+<h2>Attendance Statistics</h2>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<h3>Working Days</h3>
+
+<h1>120</h1>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-user-check"></i>
+
+<h3>Present Days</h3>
+
+<h1>110</h1>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-user-xmark"></i>
+
+<h3>Absent Days</h3>
+
+<h1>10</h1>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-percent"></i>
+
+<h3>Attendance</h3>
+
+<h1>92%</h1>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+ACHIEVEMENTS
+=========================== -->
+
+<section class="attendance-achievements">
+
+<h2>Attendance Achievements</h2>
+
+<div class="badge-grid">
+
+<div class="badge">
+
+<i class="fa-solid fa-trophy"></i>
+
+<h3>90%+ Attendance</h3>
+
+<p>Excellent Consistency</p>
+
+</div>
+
+<div class="badge">
+
+<i class="fa-solid fa-medal"></i>
+
+<h3>Perfect Week</h3>
+
+<p>No Absences</p>
+
+</div>
+
+<div class="badge">
+
+<i class="fa-solid fa-star"></i>
+
+<h3>Top Performer</h3>
+
+<p>Among Top Students</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+RECENT ACTIVITY
+=========================== -->
+
+<section class="recent">
+
+<h2>Recent Attendance Activity</h2>
+
+<div class="activity">
+
+<div class="activity-item">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<div>
+
+<h3>Java Programming</h3>
+
+<p>Marked Present • Today • 09:00 AM</p>
+
+</div>
+
+</div>
+
+<div class="activity-item">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<div>
+
+<h3>Database Management</h3>
+
+<p>Marked Present • Yesterday</p>
+
+</div>
+
+</div>
+
+<div class="activity-item">
+
+<i class="fa-solid fa-circle-xmark"></i>
+
+<div>
+
+<h3>Computer Networks</h3>
+
+<p>Absent • Last Week</p>
+
+</div>
+
+</div>
+
+<div class="activity-item">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<div>
+
+<h3>Artificial Intelligence</h3>
+
+<p>Marked Present • Last Week</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+TIPS
+=========================== -->
+
+<section class="tips">
+
+<h2>Attendance Tips</h2>
+
+<ul>
+
+<li>✅ Attend every lecture to maintain above 90% attendance.</li>
+
+<li>✅ Reach class at least 10 minutes early.</li>
+
+<li>✅ Inform faculty before planned leave.</li>
+
+<li>✅ Revise missed lectures on the same day.</li>
+
+<li>✅ Track attendance every week.</li>
+
+</ul>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 CampusOne AI • Attendance Management System
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/attendance.js"></script>
+
+</body>
+
+</html>

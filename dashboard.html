@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>CampusOne AI | Dashboard</title>
+
+<link rel="stylesheet"
+href="css/dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- =========================
+SIDEBAR
+========================== -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h2>
+
+CampusOne
+
+<span>AI</span>
+
+</h2>
+
+</div>
+
+<ul>
+
+<li class="active menu-item" data-page="dashboard">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Dashboard</span>
+
+</li>
+
+<li class="menu-item" data-page="profile">
+
+<i class="fa-solid fa-user"></i>
+
+<span>Profile</span>
+
+</li>
+
+<li class="menu-item" data-page="attendance">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<span>Attendance</span>
+
+</li>
+
+<li class="menu-item" data-page="fees">
+
+<i class="fa-solid fa-wallet"></i>
+
+<span>Fees</span>
+
+</li>
+
+<li class="menu-item" data-page="performance">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<span>Performance</span>
+
+</li>
+
+<li class="menu-item" data-page="certificates">
+
+<i class="fa-solid fa-award"></i>
+
+<span>Certificates</span>
+
+</li>
+
+<li class="menu-item" data-page="documents">
+
+<i class="fa-solid fa-folder"></i>
+
+<span>Documents</span>
+
+</li>
+
+<li class="menu-item" data-page="ai">
+
+<i class="fa-solid fa-robot"></i>
+
+<span>Campus AI</span>
+
+</li>
+
+<li class="menu-item" data-page="settings">
+
+<i class="fa-solid fa-gear"></i>
+
+<span>Settings</span>
+
+</li>
+
+<li class="logout">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<span>Logout</span>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- =========================
+MAIN CONTENT
+========================== -->
+
+<main class="main">
+
+<!-- =========================
+TOP BAR
+========================== -->
+
+<header class="topbar">
+    <button id="menu-toggle">
+
+    <i class="fa-solid fa-bars"></i>
+
+</button>
+
+<div class="search">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search...">
+
+</div>
+
+<div class="top-right">
+
+<button id="theme">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+<div class="notification">
+
+<i class="fa-solid fa-bell"></i>
+
+<span>4</span>
+
+</div>
+
+<div class="profile-mini">
+
+<img
+src="https://i.pravatar.cc/150?img=12">
+
+<div>
+
+<h4>Tanav</h4>
+
+<p>CSE AI & ML</p>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- =========================
+WELCOME
+========================== -->
+
+<section class="welcome">
+
+<div>
+
+<h1>
+
+Welcome Back,
+
+<span>Tanav 👋</span>
+
+</h1>
+
+<p>
+
+Have a productive day.
+
+You currently have
+
+92% Attendance,
+
+CGPA 8.91
+
+and 6 pending assignments.
+
+</p>
+
+</div>
+
+<button>
+
+Open Student Portal
+
+</button>
+
+</section>
+
+<!-- =========================
+CARDS
+========================== -->
+
+<section class="cards">
+
+<div class="card blue">
+
+<div>
+
+<h4>
+
+Attendance
+
+</h4>
+
+<h2>
+
+92%
+
+</h2>
+
+<p>
+
+Excellent
+
+</p>
+
+</div>
+
+<i class="fa-solid fa-calendar-check"></i>
+
+</div>
+
+<div class="card green">
+
+<div>
+
+<h4>
+
+CGPA
+
+</h4>
+
+<h2>
+
+8.91
+
+</h2>
+
+<p>
+
+Current Semester
+
+</p>
+
+</div>
+
+<i class="fa-solid fa-chart-line"></i>
+
+</div>
+
+<div class="card orange">
+
+<div>
+
+<h4>
+
+Pending Fees
+
+</h4>
+
+<h2>
+
+₹12,500
+
+</h2>
+
+<p>
+
+Due in 10 Days
+
+</p>
+
+</div>
+
+<i class="fa-solid fa-wallet"></i>
+
+</div>
+
+<div class="card purple">
+
+<div>
+
+<h4>
+
+AI Score
+
+</h4>
+
+<h2>
+
+94%
+
+</h2>
+
+<p>
+
+Outstanding
+
+</p>
+
+</div>
+
+<i class="fa-solid fa-brain"></i>
+
+</div>
+
+</section>
+
+<!-- =========================
+GRID START
+========================== -->
+
+<section class="dashboard-grid">
+
+<div class="left-column">
+    <!-- =========================================
+LEFT COLUMN
+========================================= -->
+
+<div class="panel large">
+
+<div class="panel-header">
+
+<h2>
+
+Attendance Overview
+
+</h2>
+
+<select>
+
+<option>This Week</option>
+
+<option>This Month</option>
+
+<option>This Semester</option>
+
+</select>
+
+</div>
+
+<canvas id="attendanceChart"></canvas>
+
+</div>
+
+<div class="panel">
+
+<div class="panel-header">
+
+<h2>
+
+Subject Performance
+
+</h2>
+
+</div>
+
+<div class="subject">
+
+<span>Java Programming</span>
+
+<div class="progress">
+
+<div class="progress-fill blue-fill"
+style="width:92%;"></div>
+
+</div>
+
+<strong>92%</strong>
+
+</div>
+
+<div class="subject">
+
+<span>Database Management</span>
+
+<div class="progress">
+
+<div class="progress-fill green-fill"
+style="width:89%;"></div>
+
+</div>
+
+<strong>89%</strong>
+
+</div>
+
+<div class="subject">
+
+<span>Artificial Intelligence</span>
+
+<div class="progress">
+
+<div class="progress-fill purple-fill"
+style="width:96%;"></div>
+
+</div>
+
+<strong>96%</strong>
+
+</div>
+
+<div class="subject">
+
+<span>Operating Systems</span>
+
+<div class="progress">
+
+<div class="progress-fill orange-fill"
+style="width:85%;"></div>
+
+</div>
+
+<strong>85%</strong>
+
+</div>
+
+</div>
+
+<!-- =========================================
+RIGHT COLUMN
+========================================= -->
+
+<div class="right-column">
+
+<div class="panel">
+
+<div class="panel-header">
+
+<h2>
+
+Today's Classes
+
+</h2>
+
+</div>
+
+<div class="class-card">
+
+<div>
+
+<h4>09:00 AM</h4>
+
+<p>Database Management</p>
+
+</div>
+
+<span>B-302</span>
+
+</div>
+
+<div class="class-card">
+
+<div>
+
+<h4>11:00 AM</h4>
+
+<p>Java Programming</p>
+
+</div>
+
+<span>Lab-2</span>
+
+</div>
+
+<div class="class-card">
+
+<div>
+
+<h4>02:00 PM</h4>
+
+<p>Artificial Intelligence</p>
+
+</div>
+
+<span>C-101</span>
+
+</div>
+
+<div class="class-card">
+
+<div>
+
+<h4>03:30 PM</h4>
+
+<p>Operating Systems</p>
+
+</div>
+
+<span>A-205</span>
+
+</div>
+
+</div>
+
+<!-- =========================================
+QUICK ACTIONS
+========================================= -->
+
+<div class="panel">
+
+<div class="panel-header">
+
+<h2>
+
+Quick Actions
+
+</h2>
+
+</div>
+
+<div class="action-grid">
+
+<div class="action">
+
+<i class="fa-solid fa-user"></i>
+
+<p>Profile</p>
+
+</div>
+
+<div class="action">
+
+<i class="fa-solid fa-wallet"></i>
+
+<p>Fees</p>
+
+</div>
+
+<div class="action">
+
+<i class="fa-solid fa-file"></i>
+
+<p>Documents</p>
+
+</div>
+
+<div class="action">
+
+<i class="fa-solid fa-award"></i>
+
+<p>Certificates</p>
+
+</div>
+
+<div class="action">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<p>Attendance</p>
+
+</div>
+
+<div class="action">
+
+<i class="fa-solid fa-robot"></i>
+
+<p>Campus AI</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================================
+RECENT ACTIVITY
+========================================= -->
+
+<div class="panel">
+
+<div class="panel-header">
+
+<h2>
+
+Recent Activity
+
+</h2>
+
+</div>
+
+<div class="activity">
+
+<div class="activity-item">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<div>
+
+<h4>Attendance Updated</h4>
+
+<p>You attended Java class.</p>
+
+</div>
+
+</div>
+
+<div class="activity-item">
+
+<i class="fa-solid fa-award"></i>
+
+<div>
+
+<h4>Certificate Added</h4>
+
+<p>Web Development Workshop</p>
+
+</div>
+
+</div>
+
+<div class="activity-item">
+
+<i class="fa-solid fa-wallet"></i>
+
+<div>
+
+<h4>Fee Reminder</h4>
+
+<p>₹12,500 due in 10 days.</p>
+
+</div>
+
+</div>
+
+<div class="activity-item">
+
+<i class="fa-solid fa-brain"></i>
+
+<div>
+
+<h4>AI Suggestion</h4>
+
+<p>Practice Java DSA today.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- dashboard-grid continues -->
+ <!-- =========================================
+AI ASSISTANT
+========================================= -->
+
+<div class="panel ai-panel">
+
+<div class="panel-header">
+
+<h2>Campus AI Assistant</h2>
+
+</div>
+
+<div class="ai-avatar">
+
+<i class="fa-solid fa-robot"></i>
+
+</div>
+
+<h3>Hello Tanav 👋</h3>
+
+<p>
+
+Based on your performance,
+you should practice Java,
+complete your DBMS assignment,
+and solve 3 DSA questions today.
+
+</p>
+
+<button class="ai-btn">
+
+Open AI Assistant
+
+</button>
+
+</div>
+
+<!-- =========================================
+NOTIFICATIONS
+========================================= -->
+
+<div class="panel">
+
+<div class="panel-header">
+
+<h2>Notifications</h2>
+
+</div>
+
+<div class="notification-item">
+
+<i class="fa-solid fa-bell"></i>
+
+<div>
+
+<h4>Fee Reminder</h4>
+
+<p>Semester fee due in 10 days.</p>
+
+</div>
+
+</div>
+
+<div class="notification-item">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<div>
+
+<h4>Attendance Updated</h4>
+
+<p>Your attendance reached 92%.</p>
+
+</div>
+
+</div>
+
+<div class="notification-item">
+
+<i class="fa-solid fa-award"></i>
+
+<div>
+
+<h4>Certificate Issued</h4>
+
+<p>AI Workshop Certificate Available.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================================
+GOALS
+========================================= -->
+
+<div class="panel">
+
+<div class="panel-header">
+
+<h2>Semester Goals</h2>
+
+</div>
+
+<div class="goal">
+
+<p>Attendance</p>
+
+<div class="progress">
+
+<div class="progress-fill green-fill"
+style="width:92%;"></div>
+
+</div>
+
+</div>
+
+<div class="goal">
+
+<p>Assignments</p>
+
+<div class="progress">
+
+<div class="progress-fill blue-fill"
+style="width:80%;"></div>
+
+</div>
+
+</div>
+
+<div class="goal">
+
+<p>Placement Preparation</p>
+
+<div class="progress">
+
+<div class="progress-fill orange-fill"
+style="width:70%;"></div>
+
+</div>
+
+</div>
+
+<div class="goal">
+
+<p>AI Skills</p>
+
+<div class="progress">
+
+<div class="progress-fill purple-fill"
+style="width:88%;"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================================
+ACHIEVEMENTS
+========================================= -->
+
+<div class="panel">
+
+<div class="panel-header">
+
+<h2>Achievements</h2>
+
+</div>
+
+<div class="achievement-grid">
+
+<div class="achievement">
+
+<i class="fa-solid fa-trophy"></i>
+
+<h4>Hackathon</h4>
+
+<p>2nd Position</p>
+
+</div>
+
+<div class="achievement">
+
+<i class="fa-solid fa-medal"></i>
+
+<h4>90% Club</h4>
+
+<p>Attendance</p>
+
+</div>
+
+<div class="achievement">
+
+<i class="fa-solid fa-star"></i>
+
+<h4>Top Performer</h4>
+
+<p>Artificial Intelligence</p>
+
+</div>
+
+<div class="achievement">
+
+<i class="fa-solid fa-certificate"></i>
+
+<h4>12 Certificates</h4>
+
+<p>Completed</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================================
+PLACEMENT STATUS
+========================================= -->
+
+<div class="panel">
+
+<div class="panel-header">
+
+<h2>Placement Readiness</h2>
+
+</div>
+
+<div class="subject">
+
+<span>DSA</span>
+
+<div class="progress">
+
+<div class="progress-fill blue-fill"
+style="width:76%;"></div>
+
+</div>
+
+</div>
+
+<div class="subject">
+
+<span>Java</span>
+
+<div class="progress">
+
+<div class="progress-fill green-fill"
+style="width:90%;"></div>
+
+</div>
+
+</div>
+
+<div class="subject">
+
+<span>Web Development</span>
+
+<div class="progress">
+
+<div class="progress-fill purple-fill"
+style="width:88%;"></div>
+
+</div>
+
+</div>
+
+<div class="subject">
+
+<span>Aptitude</span>
+
+<div class="progress">
+
+<div class="progress-fill orange-fill"
+style="width:72%;"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================
+END GRID
+========================================= -->
+
+</section>
+
+<div id="content-area">
+
+</div>
+
+<footer class="dashboard-footer">
+
+<p>
+
+© 2026 CampusOne AI
+
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

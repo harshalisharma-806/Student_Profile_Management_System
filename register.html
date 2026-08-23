@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>CampusOne AI | Register</title>
+
+<link rel="stylesheet"
+href="css/auth.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+<div class="auth-left">
+
+<div class="overlay">
+
+<h1>Join CampusOne AI</h1>
+
+<p>
+
+Create your account and access
+your smart student dashboard.
+
+</p>
+
+<div class="features">
+
+<div>
+
+<i class="fa-solid fa-circle-check"></i>
+
+Attendance Tracking
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-circle-check"></i>
+
+Performance Analytics
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-circle-check"></i>
+
+AI Career Assistant
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-circle-check"></i>
+
+Certificates
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-circle-check"></i>
+
+Placement Dashboard
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="auth-right">
+
+<div class="login-card">
+
+<a href="index.html" class="back">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back Home
+
+</a>
+
+<h2>Create Account 🚀</h2>
+
+<p>
+
+Start your CampusOne AI journey.
+
+</p>
+
+<form id="registerForm">
+
+<div class="row">
+
+<div class="input-box">
+
+<i class="fa-solid fa-user"></i>
+
+<input
+type="text"
+placeholder="Full Name"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-id-card"></i>
+
+<input
+type="text"
+placeholder="Roll Number"
+required>
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+type="email"
+placeholder="Email Address"
+required>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+
+<i class="fa-solid fa-phone"></i>
+
+<input
+type="tel"
+placeholder="Phone Number"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-book"></i>
+
+<select required>
+
+<option>
+
+Select Branch
+
+</option>
+
+<option>
+
+CSE
+
+</option>
+
+<option>
+
+CSE AI & ML
+
+</option>
+
+<option>
+
+ECE
+
+</option>
+
+<option>
+
+Mechanical
+
+</option>
+
+<option>
+
+Civil
+
+</option>
+
+<option>
+
+BCA
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+id="password"
+type="password"
+placeholder="Password"
+required>
+
+<i
+id="togglePassword"
+class="fa-solid fa-eye eye"></i>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+id="confirmPassword"
+type="password"
+placeholder="Confirm Password"
+required>
+
+</div>
+
+<div class="strength">
+
+<div id="strengthBar">
+
+</div>
+
+</div>
+
+<p id="strengthText">
+
+Password Strength
+
+</p>
+
+<label class="terms">
+
+<input
+type="checkbox"
+required>
+
+I agree to the Terms &
+Conditions
+
+</label>
+
+<button
+type="submit"
+class="login-btn">
+
+Create Account
+
+</button>
+
+</form>
+
+<p class="bottom">
+
+Already have an account?
+
+<a href="login.html">
+
+Login
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const pass=document.getElementById("password");
+
+const bar=document.getElementById("strengthBar");
+
+const text=document.getElementById("strengthText");
+
+pass.oninput=()=>{
+
+let len=pass.value.length;
+
+if(len<5){
+
+bar.style.width="25%";
+
+bar.style.background="red";
+
+text.innerHTML="Weak Password";
+
+}
+
+else if(len<8){
+
+bar.style.width="60%";
+
+bar.style.background="orange";
+
+text.innerHTML="Medium Password";
+
+}
+
+else{
+
+bar.style.width="100%";
+
+bar.style.background="limegreen";
+
+text.innerHTML="Strong Password";
+
+}
+
+}
+
+const eye=document.getElementById("togglePassword");
+
+eye.onclick=()=>{
+
+if(pass.type==="password"){
+
+pass.type="text";
+
+eye.classList.replace("fa-eye","fa-eye-slash");
+
+}
+
+else{
+
+pass.type="password";
+
+eye.classList.replace("fa-eye-slash","fa-eye");
+
+}
+
+}
+
+document
+
+.getElementById("registerForm")
+
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+window.location.href="dashboard.html";
+
+});
+
+</script>
+
+</body>
+
+</html>

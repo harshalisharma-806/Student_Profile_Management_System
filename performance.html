@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Performance Analytics | FORSTUD</title>
+
+<link rel="stylesheet" href="css/performance.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ===========================
+SIDEBAR
+=========================== -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h2>CampusOne <span>AI</span></h2>
+
+</div>
+
+<ul>
+
+<li onclick="location.href='dashboard.html'">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</li>
+
+<li onclick="location.href='profile.html'">
+<i class="fa-solid fa-user"></i>
+Student Profile
+</li>
+
+<li onclick="location.href='attendance.html'">
+<i class="fa-solid fa-calendar-check"></i>
+Attendance
+</li>
+
+<li onclick="location.href='fees.html'">
+<i class="fa-solid fa-wallet"></i>
+Fee Management
+</li>
+
+<li class="active">
+<i class="fa-solid fa-chart-line"></i>
+Performance
+</li>
+
+<li onclick="location.href='certificates.html'">
+<i class="fa-solid fa-award"></i>
+Certificates
+</li>
+
+<li onclick="location.href='documents.html'">
+<i class="fa-solid fa-folder"></i>
+Documents
+</li>
+
+<li onclick="location.href='ai.html'">
+<i class="fa-solid fa-robot"></i>
+AI Career Guide
+</li>
+
+<li>
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ===========================
+MAIN
+=========================== -->
+
+<main>
+
+<header class="topbar">
+
+<h1>Performance Analytics</h1>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/150?img=12">
+
+<div>
+
+<h3>Tanav</h3>
+
+<p>CSE AI & ML</p>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ===========================
+SUMMARY
+=========================== -->
+
+<section class="summary">
+
+<div class="card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h2>8.91</h2>
+
+<p>Current CGPA</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-ranking-star"></i>
+
+<h2>#18</h2>
+
+<p>Class Rank</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-book-open"></i>
+
+<h2>6</h2>
+
+<p>Subjects</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-award"></i>
+
+<h2>A+</h2>
+
+<p>Overall Grade</p>
+
+</div>
+
+</section>
+
+<!-- ===========================
+CGPA CHART
+=========================== -->
+
+<section class="chart-section">
+
+<div class="chart-card">
+
+<h2>CGPA Trend</h2>
+
+<canvas id="cgpaChart"></canvas>
+
+</div>
+
+</section>
+
+<!-- ===========================
+SUBJECT PERFORMANCE
+=========================== -->
+
+<section class="marks-table">
+
+<h2>Subject Performance</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Subject</th>
+
+<th>Internal</th>
+
+<th>External</th>
+
+<th>Total</th>
+
+<th>Grade</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Java Programming</td>
+
+<td>29</td>
+
+<td>56</td>
+
+<td>85</td>
+
+<td>A</td>
+
+</tr>
+
+<tr>
+
+<td>Database Management</td>
+
+<td>30</td>
+
+<td>58</td>
+
+<td>88</td>
+
+<td>A+</td>
+
+</tr>
+
+<tr>
+
+<td>Artificial Intelligence</td>
+
+<td>30</td>
+
+<td>60</td>
+
+<td>90</td>
+
+<td>O</td>
+
+</tr>
+
+<tr>
+
+<td>Operating Systems</td>
+
+<td>27</td>
+
+<td>53</td>
+
+<td>80</td>
+
+<td>A</td>
+
+</tr>
+
+<tr>
+
+<td>Computer Networks</td>
+
+<td>28</td>
+
+<td>52</td>
+
+<td>80</td>
+
+<td>A</td>
+
+</tr>
+
+<tr>
+
+<td>Web Development</td>
+
+<td>30</td>
+
+<td>59</td>
+
+<td>89</td>
+
+<td>A+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- Part 2 Starts Here -->
+
+<!-- ===========================
+SEMESTER GPA
+=========================== -->
+
+<section class="semester-performance">
+
+<h2>Semester GPA</h2>
+
+<div class="semester-grid">
+
+<div class="semester-card">
+
+<h3>Semester 1</h3>
+
+<h1>8.52</h1>
+
+<p>Excellent</p>
+
+</div>
+
+<div class="semester-card">
+
+<h3>Semester 2</h3>
+
+<h1>8.78</h1>
+
+<p>Very Good</p>
+
+</div>
+
+<div class="semester-card">
+
+<h3>Semester 3</h3>
+
+<h1>8.91</h1>
+
+<p>Current</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+ASSIGNMENT PROGRESS
+=========================== -->
+
+<section class="assignments">
+
+<h2>Assignment Progress</h2>
+
+<div class="assignment">
+
+<div class="assignment-info">
+
+<h3>Java Programming</h3>
+
+<span>95%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="fill java"></div>
+
+</div>
+
+</div>
+
+<div class="assignment">
+
+<div class="assignment-info">
+
+<h3>Database Management</h3>
+
+<span>88%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="fill dbms"></div>
+
+</div>
+
+</div>
+
+<div class="assignment">
+
+<div class="assignment-info">
+
+<h3>Artificial Intelligence</h3>
+
+<span>92%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="fill ai"></div>
+
+</div>
+
+</div>
+
+<div class="assignment">
+
+<div class="assignment-info">
+
+<h3>Operating Systems</h3>
+
+<span>81%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="fill os"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+UPCOMING EXAMS
+=========================== -->
+
+<section class="exam-schedule">
+
+<h2>Upcoming Exams</h2>
+
+<div class="exam-grid">
+
+<div class="exam-card">
+
+<h3>Java Programming</h3>
+
+<p>12 August 2026</p>
+
+<span>09:00 AM</span>
+
+</div>
+
+<div class="exam-card">
+
+<h3>Database Management</h3>
+
+<p>15 August 2026</p>
+
+<span>11:00 AM</span>
+
+</div>
+
+<div class="exam-card">
+
+<h3>Artificial Intelligence</h3>
+
+<p>18 August 2026</p>
+
+<span>02:00 PM</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+AI PERFORMANCE ANALYSIS
+=========================== -->
+
+<section class="prediction">
+
+<h2>AI Performance Prediction</h2>
+
+<div class="prediction-card">
+
+<i class="fa-solid fa-robot"></i>
+
+<div>
+
+<h3>Predicted CGPA</h3>
+
+<h1>9.10</h1>
+
+<p>
+
+Based on your current performance, attendance, assignment completion, and test scores, your predicted semester CGPA is approximately <strong>9.10</strong>.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+STUDY RECOMMENDATIONS
+=========================== -->
+
+<section class="recommendations">
+
+<h2>AI Study Recommendations</h2>
+
+<ul>
+
+<li>📘 Focus more on Computer Networks to improve your grade.</li>
+
+<li>💻 Solve at least 3 DSA problems every day.</li>
+
+<li>🤖 Spend 30 minutes revising Artificial Intelligence concepts.</li>
+
+<li>📚 Revise Database Management before the upcoming exam.</li>
+
+<li>🎯 Maintain attendance above 90% for bonus academic points.</li>
+
+</ul>
+
+</section>
+
+<!-- Part 3 Starts Here -->
+
+<!-- ===========================
+SKILL ANALYTICS
+=========================== -->
+
+<section class="skills">
+
+<h2>Skill Analytics</h2>
+
+<div class="skill">
+
+<div class="skill-info">
+
+<span>Java</span>
+
+<span>92%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="fill java"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-info">
+
+<span>Python</span>
+
+<span>88%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="fill python"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-info">
+
+<span>Web Development</span>
+
+<span>94%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="fill web"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-info">
+
+<span>Artificial Intelligence</span>
+
+<span>86%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="fill artificial"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+ACHIEVEMENTS
+=========================== -->
+
+<section class="achievements">
+
+<h2>Academic Achievements</h2>
+
+<div class="achievement-grid">
+
+<div class="achievement-card">
+
+<i class="fa-solid fa-trophy"></i>
+
+<h3>Top 20 Rank</h3>
+
+<p>Rank 18 in Class</p>
+
+</div>
+
+<div class="achievement-card">
+
+<i class="fa-solid fa-award"></i>
+
+<h3>Best Attendance</h3>
+
+<p>92% Overall</p>
+
+</div>
+
+<div class="achievement-card">
+
+<i class="fa-solid fa-medal"></i>
+
+<h3>AI Excellence</h3>
+
+<p>Highest Marks in AI</p>
+
+</div>
+
+<div class="achievement-card">
+
+<i class="fa-solid fa-star"></i>
+
+<h3>Web Development</h3>
+
+<p>Outstanding Project</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PERFORMANCE INSIGHTS
+=========================== -->
+
+<section class="insights">
+
+<h2>Performance Insights</h2>
+
+<div class="insight-card">
+
+<div>
+
+<h3>Strongest Subject</h3>
+
+<p>Artificial Intelligence</p>
+
+</div>
+
+<span>90 Marks</span>
+
+</div>
+
+<div class="insight-card">
+
+<div>
+
+<h3>Needs Improvement</h3>
+
+<p>Computer Networks</p>
+
+</div>
+
+<span>80 Marks</span>
+
+</div>
+
+<div class="insight-card">
+
+<div>
+
+<h3>Average Score</h3>
+
+<p>Across All Subjects</p>
+
+</div>
+
+<span>85.3%</span>
+
+</div>
+
+</section>
+
+<!-- ===========================
+SEMESTER GOALS
+=========================== -->
+
+<section class="goals">
+
+<h2>Semester Goals</h2>
+
+<div class="goal">
+
+<p>Target CGPA</p>
+
+<div class="progress">
+
+<div class="fill goal1"></div>
+
+</div>
+
+<span>9.2 / 10</span>
+
+</div>
+
+<div class="goal">
+
+<p>Assignment Completion</p>
+
+<div class="progress">
+
+<div class="fill goal2"></div>
+
+</div>
+
+<span>95%</span>
+
+</div>
+
+<div class="goal">
+
+<p>Attendance Target</p>
+
+<div class="progress">
+
+<div class="fill goal3"></div>
+
+</div>
+
+<span>95%</span>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 FORSTUD • Performance Analytics
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/performance.js"></script>
+
+</body>
+
+</html>
